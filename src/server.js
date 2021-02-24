@@ -10,12 +10,9 @@ app.listen(port, () => {
   console.log(`Servidor iniciado! Porta: ${port}`)
 })
 
-
 app.get('/usuario', (req, res, next) => {
   res.send(bd.listItems(res))
 })
-
-
 
 app.get('/usuario/:id', (req, res, next) => {
   const id = +req.params.id;
